@@ -29,5 +29,10 @@ function mapStateToProps(state) {
     anotherVar: state.second
   }
 }
+const mapDispatchToProps = dispatch => {
+  return {
+    
+  }
+}
 
-export default connect(mapStateToProps, { exampleIncrement })(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
