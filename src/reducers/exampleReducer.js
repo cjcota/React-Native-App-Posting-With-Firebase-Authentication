@@ -3,7 +3,7 @@ export default (state = 0, action) => {
 
   switch(action.type) {
     case 'INCREMENT':
-      return state + 2;
+      return state + 10;
     case SET_COUNTER:
       return action.payload;
     default:
