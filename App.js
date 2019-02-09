@@ -1,16 +1,15 @@
-import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { connect } from 'react-redux';
-import { helloAction } from './actions'
-class App extends React.Component {
+import { helloAction } from './src/actions'
+export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>{this.props.exampleVar}</Text>
+        <Text>hello</Text>
       </View>
-    );
+    )
   }
 }
 
@@ -33,8 +32,6 @@ const mapDispatchToProps = dispatch => {
     hello: () => {
       dispatch(helloAction())
     }
-    
   }
 }
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+connect(mapStateToProps, mapDispatchToProps)(App);
