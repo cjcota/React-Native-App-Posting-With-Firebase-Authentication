@@ -1,6 +1,5 @@
 import { SET_COUNTER } from '../actions/types';
-export default (state = 0, action) => {
-
+export default (state = 3, action) => {
   switch(action.type) {
     case 'INCREMENT':
       return state + 5;
