@@ -4,3 +4,8 @@ export const helloAction = () => {
     type: PRESS_HELLO_BTN
   }
 }
+export const giveAction = () => {
+  return {
+    type: 'GIVE_TEXT'
+  }
+}
