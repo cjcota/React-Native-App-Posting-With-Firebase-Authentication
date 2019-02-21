@@ -31,9 +31,23 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 //   }
 // );
 // This is the tabe navigator portion
-const MainNavigator = createBottomTabNavigator(
+const FeedTabStack = createStackNavigator(
   {
     Feed: FeedTab,
+  },
+  {
+    initialRouteName: 'Feed',
+    navigationOptions: {
+      headerTintColor: '#a41034',
+      headerStyle: {
+        backgroundColor: 'lightskyblue',
+      },
+    },
+  }
+);
+const MainNavigator = createBottomTabNavigator(
+  {
+    Feed: FeedTabStack,
     Filter: FilterTab,
     Settings: SettingsTab,
   },
@@ -58,7 +72,7 @@ const MainNavigator = createBottomTabNavigator(
       },
     }),
     tabBarOptions: {
-      activeTintColor: 'tomato',
+      activeTintColor: '#98ff98',
       inactiveTintColor: 'gray',
     },
   }
