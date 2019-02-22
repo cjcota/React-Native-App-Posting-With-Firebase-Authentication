@@ -72,7 +72,7 @@ const MainNavigator = createBottomTabNavigator(
       },
     }),
     tabBarOptions: {
-      activeTintColor: '#98ff98',
+      activeTintColor: '#03C04A',
       inactiveTintColor: 'gray',
     },
   }

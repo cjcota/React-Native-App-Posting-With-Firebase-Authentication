@@ -9,7 +9,7 @@ class FeedTab extends React.Component {
     return {
     headerTitle: 'Applause',
     headerStyle: {
-      backgroundColor: '#98ff98',
+      backgroundColor: '#03C04A',
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
@@ -33,16 +33,18 @@ class FeedTab extends React.Component {
   displaySwitch() {
     if (this.props.displayView) {
       return {
-        borderRadius: 10,borderWidth: 5, borderColor: 'powderblue', backgroundColor: 'white',
-        flex: 1,
+        //borderRadius: 10,borderWidth: 5, borderColor: 'powderblue', backgroundColor: 'white',
+        marginTop: 5,borderBottomWidth: 1,borderTopWidth: 1, borderColor: '#E8E8E8', backgroundColor: 'white',
+        flex: 2,
         //backgroundColor: 'green',
         display: 'flex',
       }
     }
     else {
       return {
-        borderRadius: 10,borderWidth: 5, borderColor: 'powderblue', backgroundColor: 'white',
-        flex: 1,
+        //borderRadius: 10,borderWidth: 5, borderColor: 'powderblue', backgroundColor: 'white',
+        marginTop: 5,borderBottomWidth: 1,borderTopWidth: 1, borderColor: '#E8E8E8', backgroundColor: 'white',
+        flex: 2,
         //backgroundColor: 'green',
         display: 'none',
       }
@@ -54,8 +56,8 @@ class FeedTab extends React.Component {
 
         <View style={styles.feed}>
           <View style={this.displaySwitch()}>
-            <TextInput
-            style={{height: 40, borderBottomColor: 'gray', borderBottomWidth: 1}}
+            <TextInput multiline={true}
+            style={{flex: 2, borderBottomColor: '#E8E8E8', borderBottomWidth: 1}}
             onChangeText={(text) => this.props.setPostText(text)}
             value={this.props.feedText}
             />
