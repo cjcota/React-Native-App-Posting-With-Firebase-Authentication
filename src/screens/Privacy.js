@@ -1,26 +1,22 @@
 import React from 'react';
 import { Button, View, StyleSheet, Text, TextInput } from 'react-native';
 import { connect } from 'react-redux';
-import { exampleIncrement, exampleSet } from '../actions'
-class FilterTab extends React.Component {
+import { exampleIncrement } from '../actions'
+class FeedTab extends React.Component {
   testThing() {
+    if (this.props.count < 8){
       this.props.incr()
-  }
-  testThing2 (){
-    this.props.incr(7)
+    }
   }
   render() {
     return (
       <View style={styles.container}>
-      <Text>Filter {this.props.count} {this.props.second.helloText}</Text>
+      <Text>Feed {this.props.count} {this.props.second.helloText}</Text>
       <Button title='press' onPress={() => this.testThing()}/>
-      <Button title='Press2' onPress={() => this.testThing2()}/>
-
       </View>
     );
   }
 }
-
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
@@ -38,9 +34,9 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = dispatch => {
   return {
-    incr: (num) => {
-      dispatch(exampleSet(num))
+    incr: () => {
+      dispatch(exampleIncrement())
     }
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(FilterTab);
+export default connect(mapStateToProps, mapDispatchToProps)(FeedTab);
