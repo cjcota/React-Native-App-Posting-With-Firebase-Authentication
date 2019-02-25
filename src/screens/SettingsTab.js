@@ -9,9 +9,9 @@ export default class SettingsTab extends React.Component {
     return (
         <View style={styles.container}>
           <Text style={styles.text}>Settings</Text>
-          <Button title= "Account Profile"  onPress={() => this.props.navigation.navigate('AccountProfile.js')} style={styles.settingstext}  />
-          <Button title= "Recent Posts"  onPress={() => this.props.navigation.navigate('RecentPosts.js')} style={styles.settingstext}  style={styles.settingstext} />
-          <Button title= 'Privacy'  onPress={() => this.props.navigation.navigate('Privacy.js')} style={styles.settingstext}  style={styles.settingstext} />
+          <Button title= "Account Profile"  onPress={() => this.props.navigation.navigate('AccountProfile')} style={styles.settingstext}  />
+          <Button title= "Recent Posts"  onPress={() => this.props.navigation.navigate('RecentPosts')} style={styles.settingstext}  style={styles.settingstext} />
+          <Button title= 'Privacy'  onPress={() => this.props.navigation.navigate('Privacy')} style={styles.settingstext}  style={styles.settingstext} />
         </View>
     );
   }

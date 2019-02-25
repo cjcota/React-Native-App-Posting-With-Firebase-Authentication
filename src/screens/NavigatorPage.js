@@ -5,6 +5,9 @@ import LoginScreen from './LoginScreen';
 import FilterTab from './FilterTab';
 import FeedTab from './FeedTab';
 import SettingsTab from './SettingsTab';
+import AccountProfile from './AccountProfile';
+import RecentPosts from './RecentPosts'
+import Privacy from './Privacy'
 import {
   createSwitchNavigator,
   createStackNavigator,
@@ -31,6 +34,23 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 //   }
 // );
 // This is the tabe navigator portion
+const SettingsTabStack = createStackNavigator(
+  {
+    Settings: SettingsTab,
+    AccountProfile: AccountProfile,
+    Privacy: Privacy,
+    RecentPosts: RecentPosts,
+  },
+  {
+    initialRouteName: 'Settings',
+    navigationOptions: {
+      headerTintColor: '#a41034',
+      headerStyle: {
+        backgroundColor: 'lightskyblue',
+      },
+    },
+  }
+);
 const FeedTabStack = createStackNavigator(
   {
     Feed: FeedTab,
@@ -49,7 +69,7 @@ const MainNavigator = createBottomTabNavigator(
   {
     Feed: FeedTabStack,
     Filter: FilterTab,
-    Settings: SettingsTab,
+    Settings: SettingsTabStack,
   },
   {
     initialRouteName: 'Feed',
