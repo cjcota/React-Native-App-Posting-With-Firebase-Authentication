@@ -4,7 +4,7 @@ export default (state = 3, action) => {
     case 'INCREMENT':
       return state + 5;
     case SET_COUNTER:
-      return action.payload;
+      return state + action.payload;
     default:
       return state;
   }
