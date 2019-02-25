@@ -10,9 +10,15 @@
   },
   "dependencies": {
     "expo": "^31.0.2",
+    "firebase": "^5.8.4",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
+<<<<<<< HEAD
+    "react-native-firebase": "^5.2.2",
+    "react-navigation": "^3.2.1",
+=======
     "react-navigation": "^3.3.0",
+>>>>>>> 86423c58621e207436295058fb70754fc49c526e
     "react-redux": "^6.0.0",
     "redux": "^4.0.1"
   },

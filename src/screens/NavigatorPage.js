@@ -6,8 +6,10 @@ import FilterTab from './FilterTab';
 import FeedTab from './FeedTab';
 import SettingsTab from './SettingsTab';
 import AccountProfile from './AccountProfile';
-import RecentPosts from './RecentPosts'
-import Privacy from './Privacy'
+import RecentPosts from './RecentPosts';
+import Privacy from './Privacy';
+import Signup from './SignupScreen';
+
 import {
   createSwitchNavigator,
   createStackNavigator,
@@ -92,19 +94,37 @@ const MainNavigator = createBottomTabNavigator(
       },
     }),
     tabBarOptions: {
-      activeTintColor: '#98ff98',
+      activeTintColor: '#03C04A',
       inactiveTintColor: 'gray',
     },
   }
 );
-// This is the switch navigator portion
-const AppNavigator = createSwitchNavigator(
+const LoginSwitch = createSwitchNavigator(
   {
     Login: LoginScreen,
     Main: MainNavigator,
   },
   {
     initialRouteName: 'Login',
+  }
+);
+const RegisterSwitch = createSwitchNavigator(
+  {
+    Register: Signup,
+    Main: MainNavigator,
+  },
+  {
+    initialRouteName: 'Register',
+  }
+);
+// This is the switch navigator portion
+const AppNavigator = createSwitchNavigator(
+  {
+    Login: LoginSwitch,
+    Register: RegisterSwitch,
+  },
+  {
+    initialRouteName: 'Register',
   }
 );
 
