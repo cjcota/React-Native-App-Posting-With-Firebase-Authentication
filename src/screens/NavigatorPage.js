@@ -5,6 +5,7 @@ import LoginScreen from './LoginScreen';
 import FilterTab from './FilterTab';
 import FeedTab from './FeedTab';
 import SettingsTab from './SettingsTab';
+import Signup from './SignupScreen';
 import {
   createSwitchNavigator,
   createStackNavigator,
@@ -77,14 +78,32 @@ const MainNavigator = createBottomTabNavigator(
     },
   }
 );
-// This is the switch navigator portion
-const AppNavigator = createSwitchNavigator(
+const LoginSwitch = createSwitchNavigator(
   {
     Login: LoginScreen,
     Main: MainNavigator,
   },
   {
     initialRouteName: 'Login',
+  }
+);
+const RegisterSwitch = createSwitchNavigator(
+  {
+    Register: Signup,
+    Main: MainNavigator,
+  },
+  {
+    initialRouteName: 'Register',
+  }
+);
+// This is the switch navigator portion
+const AppNavigator = createSwitchNavigator(
+  {
+    Login: LoginSwitch,
+    Register: RegisterSwitch,
+  },
+  {
+    initialRouteName: 'Register',
   }
 );
 
